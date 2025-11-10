@@ -26,6 +26,7 @@ func _ready():
 	create_options.client_id = ProductDetails.client_id
 	create_options.client_secret = ProductDetails.client_secret
 	create_options.encryption_key = ProductDetails.encryption_key
+	print(name, " - product ID: ", create_options.product_id)
 
 	var create_result = 0
 	var attempt_count = 0

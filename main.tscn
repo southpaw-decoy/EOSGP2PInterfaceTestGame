@@ -143,17 +143,17 @@ grow_vertical = 2
 text = "Connect"
 script = ExtResource("4_xuuy2")
 
-[node name="BackButton" type="Button" parent="GUI/MainMenu/ConnectToServerMenu"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Back"
-
 [node name="ConnectionStatus" type="Control" parent="GUI"]
 visible = false
 anchors_preset = 0
 offset_right = 640.0
 offset_bottom = 480.0
+
+[node name="BackButton2" type="Button" parent="GUI/ConnectionStatus"]
+layout_mode = 0
+offset_right = 45.0
+offset_bottom = 31.0
+text = "Back"
 
 [node name="Status" type="Label" parent="GUI/ConnectionStatus"]
 layout_mode = 1
@@ -359,7 +359,7 @@ shortcut_keys_enabled = false
 [connection signal="connect_pressed" from="GUI/MainMenu/ConnectToServerMenu/ConnectButton" to="Game" method="_on_connect_to_server_menu_connect_pressed"]
 [connection signal="pressed" from="GUI/MainMenu/ConnectToServerMenu/ConnectButton" to="GUI" method="_on_server_connect_button_pressed"]
 [connection signal="pressed" from="GUI/MainMenu/ConnectToServerMenu/ConnectButton" to="GUI/MainMenu/ConnectToServerMenu/ConnectButton" method="_on_pressed"]
-[connection signal="pressed" from="GUI/MainMenu/ConnectToServerMenu/BackButton" to="GUI" method="_on_connect_to_server_menu_back_button_pressed"]
+[connection signal="pressed" from="GUI/ConnectionStatus/BackButton2" to="GUI" method="_on_connect_to_server_menu_back_button_pressed"]
 [connection signal="pressed" from="GUI/ConnectionStatus/BackButton" to="GUI" method="_on_connection_status_back_button_pressed"]
 [connection signal="pressed" from="GUI/Login/DeviceIdButton" to="." method="_on_device_id_button_pressed"]
 [connection signal="pressed" from="GUI/Login/DeviceIdButton" to="GUI" method="_on_device_id_login_button_pressed"]
